@@ -6,6 +6,9 @@ pipeline {
             steps {
                 sh 'go version'
                 sh 'echo "Hello World!"'
+                catchError(buildResult: 'NOT_BUILT', message: 'this is the thing', stageResult: 'FAILURE') {
+    // some block
+}
             }
         }
     }
