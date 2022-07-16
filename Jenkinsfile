@@ -5,9 +5,9 @@ pipeline {
         stage('compile') {
             steps {
                 sh 'cd server'
-                echo 'cd server completed successfully...'
+                sh 'echo server completed successfully...'
                 sh 'go build ./...'
-                echo 'project build completed sucessfully...'
+                sh 'echo project build completed sucessfully...'
             }
         }
     }
