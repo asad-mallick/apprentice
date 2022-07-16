@@ -1,10 +1,13 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'golang:1.17.5-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage('compile') {
             steps {
-                sh 'go version'
+                sh 'cd server'
+                echo 'cd server completed successfully...'
+                sh 'go build ./...'
+                echo 'project build completed sucessfully...'
             }
         }
     }
