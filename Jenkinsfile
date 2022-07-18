@@ -12,7 +12,7 @@ pipeline {
                     dir('server') {
                       sh "pwd"
                     }
-            //  sh "pwd"
+                sh "pwd"
                 sh 'echo server completed successfully...'
                 sh 'go build -o server/server.go'
             //  sh 'go build ./...'
