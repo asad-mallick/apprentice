@@ -1,6 +1,9 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
+    tools {
+        go 'go 1.18.3'
+    }
     stages {
         stage('build') {
             steps {
