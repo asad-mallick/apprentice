@@ -14,7 +14,7 @@ pipeline {
                     }
             //  sh "pwd"
                 sh 'echo server completed successfully...'
-                sh 'go build -o apiserver'
+                sh 'go build -o server/server.go'
             //  sh 'go build ./...'
                 sh 'echo project build completed sucessfully...'
             }
