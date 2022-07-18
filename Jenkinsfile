@@ -8,7 +8,11 @@ pipeline {
         stage('build') {
             steps {
                 sh 'go mod tidy'
-                sh 'cd server'
+                sh "pwd"
+                    dir('server') {
+                      sh "pwd"
+                    }
+                sh "pwd"
                 sh 'echo server completed successfully...'
                 sh 'go build ./...'
                 sh 'echo project build completed sucessfully...'
